@@ -1,0 +1,27 @@
+.modal {
+    width: 35vw;
+    height: 60vh;
+    position: fixed;
+    background-color: black;
+    justify-self: center;
+    align-self: center;
+}
+
+.modal:hover {
+    display: none;
+}
+
+body {
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: minmax(100vh, min-content);
+
+}
