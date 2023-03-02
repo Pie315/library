@@ -2,7 +2,7 @@
     width: 35vw;
     height: 60vh;
     position: fixed;
-    background-color: black;
+    background-color: rgb(103, 103, 103);
     justify-self: center;
     align-self: center;
 }
@@ -12,16 +12,18 @@
 }
 
 body {
-    background-color: white;
+    background-color: rgb(42, 36, 36);
     margin: 0px;
     padding: 0px;
     width: 100vw;
-
+    color: white;
+    font-size: 2rem;
 }
 
 .page {
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: minmax(100vh, min-content);
-
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(67, 56, 56);
+    width: 100vw;
+    height: 100vw;
 }
