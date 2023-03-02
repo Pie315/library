@@ -1,13 +1,14 @@
 .modal {
-    width: 35vw;
-    height: 60vh;
+    width: 100vw;
+    height: 100vh;
     position: fixed;
     background-color: rgb(103, 103, 103);
     justify-self: center;
+    overflow: visible;
     align-self: center;
 }
 
-.modal:hover {
+.hide {
     display: none;
 }
 
@@ -25,5 +26,5 @@ body {
     flex-direction: column;
     background-color: rgb(67, 56, 56);
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
 }
