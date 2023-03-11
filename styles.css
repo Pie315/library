@@ -44,18 +44,36 @@ body {
     background-color: rgb(16, 16, 16);
     display: flex;
     flex-direction: column;
+    align-items: center;
     border: 3px solid black;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
+    justify-content: center;
+    gap: 20px;
 }
 
 .modalBox > h2 {
-    grid-column: 1/3;
-    justify-self: center;
+    margin: 0px;
 }
 
 .title {
-    margin-top: 30px;
     font-size: 50px;
     font-weight: 600;
+}
+
+.field {
+    width: 300px;
+    height: 36px;
+    border: 2px solid rgb(4, 118, 143);
+    background-color: black;
+    color: whitesmoke;
+
+    border-radius: 20px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+
+.field:focus {
+    border-color: rgb(9, 193, 234);
+    outline: none;
 }
