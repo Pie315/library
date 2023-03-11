@@ -1,5 +1,6 @@
 :root {
     font-family: 'Montserrat', sans-serif;
+    --mainGrey: rgb(140, 148, 148);
 }
 
 .modal {
@@ -25,7 +26,7 @@ body {
     margin: 0px;
     padding: 0px;
     width: 100vw;
-    color: white;
+    color: var(--mainGrey);
     font-size: 2rem;
 }
 
@@ -59,6 +60,7 @@ body {
 .title {
     font-size: 50px;
     font-weight: 600;
+    margin-top: 20px;
 }
 
 .field {
@@ -67,7 +69,6 @@ body {
     border: 2px solid rgb(4, 118, 143);
     background-color: black;
     color: whitesmoke;
-
     border-radius: 20px;
     padding-left: 15px;
     font-size: 20px;
@@ -76,4 +77,18 @@ body {
 .field:focus {
     border-color: rgb(9, 193, 234);
     outline: none;
+}
+
+.addBook {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: var(--mainGrey);
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.addBook:hover {
+    border: 2px solid rgb(4, 118, 143);
 }
