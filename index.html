@@ -31,15 +31,21 @@
             <form class="modalBox">
 
                 <h2>Add Book</h2>
-                <input type="text" class="field" name="title" id="title" placeholder="The Great Gatsby">
-                <input type="text" class="field" name="author" id="author" placeholder="Ray Bradbury">
-                <input type="text" class="field" name="pages" id="pages" placeholder="543">
-                <input type="checkbox" class="field" name="read" id="read">
 
-                <div class="submit">
-                    <input type="submit"></input>
+                <div class="grid">
+                    <label for="title">Title</label>
+                    <input type="text" class="field" name="title" id="title" placeholder="The Great Gatsby">
+                    
+                    <label for="author">Author</label>
+                    <input type="text" class="field" name="author" id="author" placeholder="Ray Bradbury">
+                    
+                    <label for="pages">Pages</label>
+                    <input type="text" class="field" name="pages" id="pages" placeholder="543">
+    
+                    <label for="read">Read</label>
+                    <input type="checkbox" class="check" name="read" id="read">
                 </div>
-                
+                <input type="submit" class="addBook"></input>
             </form>
 
         </div>
