@@ -81,7 +81,7 @@ body {
     outline: none;
 }
 
-.addBook {
+.button {
     margin-top: 20px;
     width: 150px;
     height: 40px;
@@ -89,9 +89,10 @@ body {
     color: var(--mainGrey);
     font-size: 20px;
     border-radius: 20px;
+    border: 0px solid black;
 }
 
-.addBook:hover {
+.button:hover {
     border: 2px solid rgb(4, 118, 143);
 }
 
