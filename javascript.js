@@ -3,11 +3,26 @@ const addBook = document.querySelector("#addBook");
 const modalBox = document.querySelector(".modalBox");
 const submit = document.querySelector("#submit");
 
+let library = [];
+
+function Book() {
+
+}
+
 function showModal() {
     modal.classList.toggle("hide")
 }
 
+function createCard() {
+    const info = document.querySelectorAll(".info")
+    const infoList = [];
 
+    info.forEach((element) => { 
+        infoList.push(element.value);
+    });
+    
+
+}
 
 modalBox.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -21,6 +36,7 @@ addBook.addEventListener("click", () => {
     showModal()
 });
 
-submit.addEventListener("click", () => {
+submit.addEventListener("click", (Event) => {
     Event.preventDefault();
+    createCard();
 });
