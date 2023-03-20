@@ -3,7 +3,7 @@ const addBook = document.querySelector("#addBook");
 const modalBox = document.querySelector(".modalBox");
 const submit = document.querySelector("#submit");
 
-let library = [];
+const library = [];
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -27,11 +27,11 @@ function createCard() {
     });
     const add = new Book(infoList[0], infoList[1], infoList[2], read.checked);
     library.push(add);
-    console.table(library);
+    // console.table(library);
 
+    const container = document.querySelector(".cardContainer")
 
-
-
+    
 }
 
 // Resets all input VALUES to default
