@@ -16,27 +16,33 @@ function showModal() {
     modal.classList.toggle("hide")
 }
 
-// 
+// Adds to library and adds card
 function createCard() {
     const info = document.querySelectorAll(".info")
     const infoList = [];
+    const read = document.querySelector(".check");
 
     info.forEach((element) => { 
         infoList.push(element.value);
     });
-    const add = new Book(infoList[0], infoList[1], infoList[2], infoList[3]);
+    const add = new Book(infoList[0], infoList[1], infoList[2], read.checked);
     library.push(add);
     console.table(library);
+
+
+
+
 }
 
-// Resets all input VALUES to ""
+// Resets all input VALUES to default
 function clearInputs () {
+    const read = document.querySelector(".check");
     const info = document.querySelectorAll(".info")
     for (let i = 0; i < info.length; i += 1) {
         info[i].value = "";
     }
+    read.checked = false;
 }
-
 
 // Stops propagation that closes modal 
 modalBox.addEventListener("click", (e) => {
