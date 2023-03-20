@@ -24,7 +24,9 @@ function createCard() {
     info.forEach((element) => { 
         infoList.push(element.value);
     });
-    console.log(infoList);
+    const add = new Book(infoList[0], infoList[1], infoList[2], infoList[3]);
+    library.push(add);
+    console.table(library);
 }
 
 // Resets all input VALUES to ""
