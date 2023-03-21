@@ -23,7 +23,7 @@
 }
 
 body {
-    background-color: rgb(42, 36, 36);
+    background-color: rgb(46, 46, 46);
     margin: 0px;
     padding: 0px;
     width: 100vw;
@@ -37,7 +37,7 @@ body {
     flex-direction: column;
     background-color: rgb(46, 46, 46);
     width: 100vw;
-    height: min-content;
+    height: minmax(100vh, min-content);
     align-items: center;
 }
 
@@ -136,14 +136,28 @@ label {
     background: hsl(0, 0%, 18%);
     border: 3px solid black;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
     padding: 15px;
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+    align-content: space-around;
+    align-items: end;
+    column-gap: 10px;
 }
 
 p {
+    font-size: 25px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.key {
+    font-weight: 600;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.input {
     font-size: 20px;
-    padding: none;
-    margin: none;
 }

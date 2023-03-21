@@ -23,13 +23,15 @@ function createCard(cardObj) {
     container.appendChild(card)
 
     const keys = Object.keys(cardObj);
-    console.table(keys);
 
     for (let i = 0; i < keys.length; i += 1) {
         const key = document.createElement("p");
-        const input = document.createElement("p");
+        key.classList.add("key");
 
-        key.textContent = keys[i];
+        const input = document.createElement("p");
+        input.classList.add("input")
+
+        key.textContent = (`${keys[i]}: `);
         input.textContent = cardObj[keys[i]];
 
         card.appendChild(key);
