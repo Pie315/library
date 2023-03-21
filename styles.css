@@ -119,20 +119,31 @@ label {
 }
 
 .cardContainer {
-    width: 100vw;
-    padding: 40px 8vw 0 8vw;
+    width: 80vw;
+    margin-top: 40px;
     height: min-content;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 250px);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     row-gap: 20px;
-    column-gap: 20px;
+    column-gap: 15px;
     justify-content: center;
+    justify-items: stretch;
 }
 
 .card {
-    width: 250px;
+    width: auto;
     height: 350px;
     background: hsl(0, 0%, 18%);
     border: 3px solid black;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+p {
+    font-size: 20px;
+    padding: none;
+    margin: none;
 }
