@@ -16,8 +16,33 @@ function showModal() {
     modal.classList.toggle("hide")
 }
 
-// Adds to library and adds card
-function createCard() {
+function createCard(cardObj) {
+    const container = document.querySelector(".cardContainer")
+    const card = document.createElement("div");
+    card.classList.add("card");
+    container.appendChild(card)
+
+    const keys = Object.keys(cardObj);
+    console.table(keys);
+
+    for (let i = 0; i < keys.length; i += 1) {
+        const key = document.createElement("p");
+        const input = document.createElement("p");
+
+        key.textContent = keys[i];
+        input.textContent = cardObj[keys[i]];
+
+        card.appendChild(key);
+        card.appendChild(input);
+
+        console.log(keys[i], cardObj[keys[i]]);
+    }
+    container.insertBefore(card, container.children[0]);
+
+}
+
+// Adds to library
+function addLibrary() {
     const info = document.querySelectorAll(".info")
     const infoList = [];
     const read = document.querySelector(".check");
@@ -27,10 +52,7 @@ function createCard() {
     });
     const add = new Book(infoList[0], infoList[1], infoList[2], read.checked);
     library.push(add);
-    // console.table(library);
-
-    const container = document.querySelector(".cardContainer")
-
+    createCard(add);
     
 }
 
@@ -62,7 +84,7 @@ addBook.addEventListener("click", () => {
 // Submit button
 submit.addEventListener("click", (Event) => {
     Event.preventDefault();
-    createCard();
+    addLibrary();
     clearInputs();
     showModal();
 });
