@@ -37,7 +37,6 @@ function createCard(cardObj) {
         card.appendChild(key);
         card.appendChild(input);
 
-        console.log(keys[i], cardObj[keys[i]]);
     }
     container.insertBefore(card, container.children[0]);
 
